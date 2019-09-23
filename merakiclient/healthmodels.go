@@ -219,31 +219,31 @@ func (sd *ScanData) GetMapStr(stattype string, addlnKVP map[string]string) ([]co
 
 	var mapStrArr []common.MapStr
 	for _, observation := range sd.Data.Observations {
-		elLoc := ElasticLoc{
-			Lat: observation.Location.Lat,
-			Lon: observation.Location.Lng,
-		}
+		//elLoc := ElasticLoc{
+		//	Lat: observation.Location.Lat,
+		//	Lon: observation.Location.Lng,
+		//}
 		mapStr := common.MapStr{
-			"type":                stattype,
-			"datatype":            sd.Type,
-			"apMac":               sd.Data.ApMac,
-			"apFloors":            sd.Data.ApFloors,
-			"apTags":              sd.Data.ApTags,
-			"client.ssid":         observation.Ssid,
-			"client.rssi":         observation.Rssi,
-			"cliet.ipv4":          observation.Ipv4,
-			"client.ipv6":         observation.Ipv6,
-			"client.manufacturer": observation.Manufacturer,
-			"client.seenTime":     observation.SeenTime,
-			"client.seenEpoch":    observation.SeenEpoch,
-			"client.os":           observation.Os,
-			"client.Mac":          observation.ClientMac,
-			"client.lat":          observation.Location.Lat,
-			"client.lng":          observation.Location.Lng,
-			"client.unc":          observation.Location.Unc,
-			"client.x":            observation.Location.X,
-			"client.y":            observation.Location.Y,
-			"location":            elLoc,
+			"ecs.version":                 "1.0.0",
+			"type":                        stattype,
+			"observer.type":               sd.Type,
+			"observer.mac":                sd.Data.ApMac,
+			"observer.apFloors":           sd.Data.ApFloors,
+			"observer.tags":               sd.Data.ApTags,
+			"observer.ssid":               observation.Ssid,
+			"host.rssi":                   observation.Rssi,
+			"host.ip":                     observation.Ipv4,
+			"host.ipv6":                   observation.Ipv6,
+			"host.vendor":                 observation.Manufacturer,
+			"host.seenTime":               observation.SeenTime,
+			"host.seenEpoch":              observation.SeenEpoch,
+			"host.os":                     observation.Os,
+			"host.mac":                    observation.ClientMac,
+			"host.geo.lat":                observation.Location.Lat,
+			"host.geo.lon":                observation.Location.Lng,
+			"host.geo.uncertainty.meters": observation.Location.Unc,
+			"host.geo.x.meters":           observation.Location.X,
+			"host.geo.y.meters":           observation.Location.Y,
 		}
 		for key, value := range addlnKVP {
 			mapStr.Put(key, value)
