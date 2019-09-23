@@ -90,4 +90,5 @@ make package
 This will fetch and create all images required for the build process. The whole process to finish can take several minutes.
 
 ## Beat plugin guide
-For further development, check out the [beat developer guide](https://www.elastic.co/guide/en/beats/libbeat/current/new-beat.html).
+For further development, check out the [beat developer guide](h
+l).

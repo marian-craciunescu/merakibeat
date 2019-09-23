@@ -1,4 +1,4 @@
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/merakibeat)
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/marian-craciunescu/merakibeat)
 # Merakibeat
 
 This is elastic beats (https://www.elastic.co/products/beats) plugin for Meraki
@@ -93,7 +93,7 @@ All these field are configured in merakibeat.yml config file
 
 ## Running merakibeat
 ### As docker-composer (**Recommended**)
-https://github.com/CiscoDevNet/merakibeat/blob/master/docker-compose/README.md
+https://github.com/marian-craciunescu/merakibeat/blob/master/docker-compose/README.md
 
 ### As binary
 ```
@@ -101,4 +101,4 @@ merakibeats -e -d *
 ```
 
 ## Building Source code
-https://github.com/CiscoDevNet/merakibeat/blob/master/DEVELOPMENT.md
+https://github.com/marian-craciunescu/merakibeat/blob/master/DEVELOPMENT.md

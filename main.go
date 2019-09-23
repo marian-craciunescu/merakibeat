@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/CiscoDevNet/merakibeat/cmd"
+	"github.com/marian-craciunescu/merakibeat/cmd"
 )
 
 func main() {
