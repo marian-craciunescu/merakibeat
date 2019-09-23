@@ -4,8 +4,44 @@
 
 merakibeat:
   # Defines how often an event is sent to the output
-  period: 1s
-
+  period: 120s
+  # define meraki url
+  merakihost: http://api.meraki.com
+  # define meraki secret key
+  merakikey: 7f1db01360c2a3873cfacce6cd97e0563eb1e7f4
+  # define network ids
+  merakinewtorkids: ["L_657525545596098870"]
+  #define meraki org
+  merakiorgid: "754356"
+  # enable(1) disable(0) Network Connection Stats
+  nwconnstat: 0
+  # enable(1) disable(0) Network Latency Stats
+  nwlatencystat: 0
+  # enable(1) disable(0) Device Connection Stats
+  devconnstat: 0
+  # enable(1) disable(0) Device Latency Stats
+  devlatencystat: 0
+  # enable(1) disable(0) Clients Connection Stats
+  clconnstat: 0
+  # enable(1) disable(0) Clients Latency Stats
+  cllatencystat: 0
+  # Meraki Scanning API config
+  # enable(1) disable(0) B Location Events
+  scanEnable : 1
+  # secret key used by the HTTPS server
+  scanSecret : "changeme"
+  # secret string to be validated by meraki cloud
+  scanValidator : "changeme"
+  # HTTPS server certificate absolute path
+  serverCert: "/plugin/server.pem"
+  # HTTPS servers secret key absolute  path
+  serverKey: "/plugin/server.key"
+  # HTTPS port to listen for Scan Receiver
+  scanPort: 5001
+  #Camera API config
+  # List of "cameraserialid:zone_id"
+  videoPeriod: 120s
+  cameraZoneList: ["Q2GV-DGHE-SX5T:0"]
 #================================ General =====================================
 
 # The name of the shipper that publishes the network data. It can be used to group
