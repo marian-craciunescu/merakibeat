@@ -20,6 +20,9 @@ type Config struct {
 	ScanSecret        string        `config:"scanSecret"`
 	ScanValidator     string        `config:"scanValidator"`
 	ScanEnable        int           `config:"scanEnable"`
+	ServerCert        string        `config:"serverCert"`
+	SerkerKey         string        `config:"serverKey"`
+	ScanPort          int           `config:"scanPort"`
 	VideoPeriod       time.Duration `config:"videoPeriod"`
 	CameraZoneList    []string      `config:"cameraZoneList"`
 

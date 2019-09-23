@@ -15,11 +15,13 @@ services:
       - elk
 
   merakibeat:
-    image: npateriyainsecure/merakibeat
+    image: merakibeat
     ports:
       - "5001:5001"
     volumes:
       - ./config/merakibeat.yml:/plugin/merakibeat.yml:ro
+      - ./cert.pem:/plugin/cert.pem
+      - ./server.key://plugin/server.key
     networks:
       - elk
     depends_on:

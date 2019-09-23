@@ -43,7 +43,7 @@ func (bt *Merakibeat) Run(b *beat.Beat) error {
 		return err
 	}
 	if bt.config.ScanEnable == 1 {
-		receiver := merakiclient.NewScanReceiver(bt.config.ScanSecret, bt.config.ScanValidator, bt.client)
+		receiver := merakiclient.NewScanReceiver(bt.config, bt.client)
 		go receiver.Run()
 	}
 	// health api poller

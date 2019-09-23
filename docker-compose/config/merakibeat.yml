@@ -19,6 +19,9 @@ merakibeat:
   scanEnable : 0
   scanSecret : "changeme"
   scanValidator : "changeme"
+  serverCert: "/plugin/server.pem"
+  serverKey: "/plugin/server.key"
+  scanPort: 5001
   #Camera API config
   # List of "cameraserialid:zone_id"
   videoPeriod: 120s

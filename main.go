@@ -1,13 +1,14 @@
 package main
 
 import (
-	"os"
-
+	"fmt"
 	"github.com/marian-craciunescu/merakibeat/cmd"
+	"log"
 )
 
 func main() {
 	if err := cmd.RootCmd.Execute(); err != nil {
-		os.Exit(1)
+		fmt.Println("Error=", err.Error())
+		log.Fatal("Could not start merakibeat")
 	}
 }
