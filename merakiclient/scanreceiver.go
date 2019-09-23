@@ -40,7 +40,7 @@ func NewScanReceiver(config config.Config, bc beat.Client) *ScanReceiver {
 		keyPATH:    config.SerkerKey,
 		version:    "2.0",
 		mux:        http.NewServeMux(),
-		hostPort:   ":5001",
+		hostPort:   fmt.Sprintf(":%d", config.ScanPort),
 		beatClient: bc,
 		logger:     logp.NewLogger(moduleName),
 	}
