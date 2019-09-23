@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  merakibeat:
+    image: merakibeatsecure
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./merakibeat.yml:/plugin/merakibeat.yml:ro
+      - /plugin/cert.pem:/plugin/cert.pem:ro
+      - /plugin/server.key:/plugin/server.key:ro
