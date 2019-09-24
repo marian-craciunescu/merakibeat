@@ -1,7 +1,5 @@
 FROM golang:1.12.9
-#--build-arg key_path=secret.key  cert_path=cert.pem
-ARG cert_path=cert.pem
-ARG key_path=secret.key
+
 
 MAINTAINER Marian Craciunescu
 
@@ -23,9 +21,10 @@ RUN mkdir /plugin
 COPY merakibeat.yml /plugin/
 COPY fields.yml /plugin/
 COPY merakibeat /plugin/merakibeat
+COPY merakibeat.yml /plugin/merakibeat.yml
 
-COPY  $key_path /plugin/server.key
-COPY  $cert_path  /plugin/cert.pem
+COPY server.key /plugin/server.key
+COPY cert.pem /plugin/cert.pem
 WORKDIR /plugin
 
-ENTRYPOINT ["/plugin/merakibeat", "-e", "-d", "*"]
+ENTRYPOINT ["/plugin/merakibeat" ,"-e" ]

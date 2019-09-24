@@ -33,9 +33,9 @@ merakibeat:
   # secret string to be validated by meraki cloud
   scanValidator : "changeme"
   # HTTPS server certificate absolute path
-  serverCert: "/plugin/server.pem"
+  serverCert: "./cert.pem"
   # HTTPS servers secret key absolute  path
-  serverKey: "/plugin/server.key"
+  serverKey: "./server.key"
   # HTTPS port to listen for Scan Receiver
   scanPort: 5001
   #Camera API config
